@@ -53,4 +53,9 @@ public class StudentController implements IRestConstants {
 		return STUDENT_COUNTRY_MAP.containsKey(studentNo) ? STUDENT_COUNTRY_MAP.get(studentNo).toString() : EMPTY_STR;
 	}
 
+	@PostMapping(value = "/getCountry/{studentNo}", produces = MediaType.TEXT_PLAIN_VALUE)
+	String getCountryByPB(@PathVariable final String studentNo) {
+		return STUDENT_COUNTRY_MAP.containsKey(studentNo) ? STUDENT_COUNTRY_MAP.get(studentNo).toString() : EMPTY_STR;
+	}
+
 }
